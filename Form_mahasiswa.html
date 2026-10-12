@@ -2,154 +2,112 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Form Data Mahasiswa</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        fieldset {
-            border: 1px solid #777;
-            margin-bottom: 20px;
-            padding: 15px;
-            width: 500px;
-        }
-        legend {
-            font-weight: normal;
-        }
-        .form-group {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: flex-start;
-        }
-        .label {
-            width: 140px;
-            display: inline-block;
-        }
-        .colon {
-            width: 20px;
-            display: inline-block;
-        }
-        .input-control {
-            flex-grow: 1;
-        }
-        input[type="text"], select, textarea {
-            width: 250px;
-            padding: 2px;
-            box-sizing: border-box;
-        }
-        textarea {
-            width: 280px;
-            height: 70px;
-            resize: both;
-        }
-        .checkbox-group, .radio-group {
-            display: inline-block;
-        }
-        .checkbox-line {
-            margin-bottom: 5px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Mahasiswa</title>
 </head>
 <body>
 
-    <form>
-        <!-- Data Mahasiswa Section -->
+    <h2>Form Mahasiswa</h2>
+
+    <form action="#" method="post">
         <fieldset>
             <legend>Data Mahasiswa</legend>
-            <div class="form-group">
-                <span class="label">Nama</span>
-                <span class="colon">:</span>
-                <input type="text" name="nama">
-            </div>
-            <div class="form-group">
-                <span class="label">NPM</span>
-                <span class="colon">:</span>
-                <input type="text" name="npm">
-            </div>
-            <div class="form-group">
-                <span class="label">Kelas</span>
-                <span class="colon">:</span>
-                <select name="kelas">
-                    <option value=""disabled selected hidden></option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="c">C</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <span class="label">Jenis Kelamin</span>
-                <span class="colon">:</span>
-                <div class="radio-group">
-                    <label><input type="radio" name="jk" value="Pria"> Pria</label>
-                    <label><input type="radio" name="jk" value="Wanita"> Wanita</label>
-                </div>
-            </div>
+            <table cellpadding="5">
+                <tr>
+                    <td><label for="nama">Nama</label></td>
+                    <td>: <input type="text" id="nama" name="nama"></td>
+                </tr>
+                <tr>
+                    <td><label for="npm">NPM</label></td>
+                    <td>: <input type="text" id="npm" name="npm"></td>
+                </tr>
+                <tr>
+                    <td><label for="kelas">Kelas</label></td>
+                    <td>: 
+                        <select id="kelas" name="kelas">
+                            <option value="">-- Pilih Kelas --</option>
+                            <option value="A">Kelas A</option>
+                            <option value="B">Kelas B</option>
+                            <option value="C">Kelas C</option>
+                            <option value="D">Kelas D</option>
+                            <option value="Karyawan">Kelas Karyawan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>: 
+                        <input type="radio" id="pria" name="jenis_kelamin" value="Pria">
+                        <label for="pria">Pria</label>
+                        <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
+                        <label for="wanita">Wanita</label>
+                    </td>
+                </tr>
+            </table>
         </fieldset>
 
-        <!-- Tempat Tinggal Mahasiswa Section -->
         <fieldset>
             <legend>Tempat Tinggal Mahasiswa</legend>
-            <div class="form-group">
-                <span class="label">Alamat</span>
-                <span class="colon">:</span>
-                <textarea name="alamat"></textarea>
-            </div>
-            <div class="form-group">
-                <span class="label">Kecamatan</span>
-                <span class="colon">:</span>
-                <input type="text" name="kecamatan">
-            </div>
-            <div class="form-group">
-                <span class="label">Kabupaten/Kota</span>
-                <span class="colon">:</span>
-                <input type="text" name="kabupaten">
-            </div>
-            <div class="form-group">
-                <span class="label">Provinsi</span>
-                <span class="colon">:</span>
-                <input type="text" name="provinsi">
-            </div>
-            <div class="form-group">
-                <span class="label">Kode Pos</span>
-                <span class="colon">:</span>
-                <input type="text" name="kodepos">
-            </div>
+            <table cellpadding="5">
+                <tr>
+                    <td style="vertical-align: top;"><label for="alamat">Alamat</label></td>
+                    <td style="vertical-align: top;">: <textarea id="alamat" name="alamat" rows="4" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="kecamatan">Kecamatan</label></td>
+                    <td>: <input type="text" id="kecamatan" name="kecamatan"></td>
+                </tr>
+                <tr>
+                    <td><label for="kabupaten">Kabupaten/Kotamadya</label></td>
+                    <td>: <input type="text" id="kabupaten" name="kabupaten"></td>
+                </tr>
+                <tr>
+                    <td><label for="provinsi">Provinsi</label></td>
+                    <td>: <input type="text" id="provinsi" name="provinsi"></td>
+                </tr>
+                <tr>
+                    <td><label for="kode_pos">Kode Pos</label></td>
+                    <td>: <input type="text" id="kode_pos" name="kode_pos"></td>
+                </tr>
+            </table>
         </fieldset>
 
-        <!-- Lain-lainya Section -->
         <fieldset>
-            <legend>Lain-lainya</legend>
-            <div class="form-group">
-                <span class="label">Bahasa Pemrograman</span>
-                <span class="colon">:</span>
-                <div class="checkbox-group">
-                    <div class="checkbox-line">
-                        <label><input type="checkbox" name="bahasa[]" value="C/C++"> C/C++</label>
-                        <label style="margin-left: 10px;"><input type="checkbox" name="bahasa[]" value="Go Lang"> Go Lang</label>
-                        <label style="margin-left: 10px;"><input type="checkbox" name="bahasa[]" value="Python"> Python</label>
-                    </div>
-                    <div class="checkbox-line">
-                        <label><input type="checkbox" name="bahasa[]" value="Lainnya"> Lainnya</label>
-                    </div>
-                    <div class="checkbox-line">
-                        <label><input type="checkbox" name="bahasa[]" value="PHP"> PHP</label>
-                        <label style="margin-left: 10px;"><input type="checkbox" name="bahasa[]" value="Javascript"> Javascript</label>
-                        <label style="margin-left: 10px;"><input type="checkbox" name="bahasa[]" value="Ruby"> Ruby</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <span class="label">Kegiatan</span>
-                <span class="colon">:</span>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="kegiatan[]" value="Organisasi Kemahasiswaan"> Organisasi Kemahasiswaan</label>
-                    <br>
-                    <label><input type="checkbox" name="kegiatan[]" value="Bidang Olahraga"> Bidang Olahraga</label>
-                    <label style="margin-left: 10px;"><input type="checkbox" name="kegiatan[]" value="Lainnya"> Lainnya</label>
-                </div>
-            </div>
+            <legend>Lain-lainnya</legend>
+            <table cellpadding="5">
+                <tr>
+                    <td style="vertical-align: top;">Bahasa Pemrograman</td>
+                    <td style="vertical-align: top;">:</td>
+                    <td>
+                        <input type="checkbox" id="c_cpp" name="bahasa[]" value="C/C++"> <label for="c_cpp">C/C++</label>
+                        <input type="checkbox" id="go" name="bahasa[]" value="Go Lang"> <label for="go">Go Lang</label>
+                        <input type="checkbox" id="python" name="bahasa[]" value="Python"> <label for="python">Python</label>
+                        <input type="checkbox" id="bahasa_lainnya" name="bahasa[]" value="Lainnya"> <label for="bahasa_lainnya">Lainnya</label>
+                        <br>
+                        <input type="checkbox" id="php" name="bahasa[]" value="PHP"> <label for="php">PHP</label>
+                        <input type="checkbox" id="javascript" name="bahasa[]" value="Javascript"> <label for="javascript">Javascript</label>
+                        <input type="checkbox" id="ruby" name="bahasa[]" value="Ruby"> <label for="ruby">Ruby</label>
+                    </td>
+                </tr>
+                 <tr>
+                    <td style="vertical-align: top;">Kegiatan</td>
+                    <td style="vertical-align: top;">:</td>
+                    <td>
+                        <input type="checkbox" id="organisasi_kampus" name="kegiatan[]" value="Organisasi Kemahasiswaan"> <label for="organisasi_kampus">Organisasi Kemahasiswaan</label>
+                        <input type="checkbox" id="olahraga" name="kegiatan[]" value="Bidang Olahraga"> <label for="olahraga">Bidang Olahraga</label>
+                        <input type="checkbox" id="kegiatan_lainnya" name="kegiatan[]" value="Lainnya"> <label for="kegiatan_lainnya">Lainnya</label>
+                        <br>
+                        <input type="checkbox" id="organisasi_luar" name="kegiatan[]" value="Organisasi di Luar Kampus"> <label for="organisasi_luar">Organisasi di Luar Kampus</label>
+                        <input type="checkbox" id="seni" name="kegiatan[]" value="Bidang Seni"> <label for="seni">Bidang Seni</label>
+                    </td>
+                </tr>
+            </table>
         </fieldset>
+
+        <br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+
     </form>
 
 </body>
